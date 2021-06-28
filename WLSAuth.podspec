@@ -8,28 +8,34 @@
 
 Pod::Spec.new do |spec|
 
-  spec.name         = "WLSAuth"
-  spec.version      = "0.0.1"
-  spec.summary      = "Authorization with social media"
-  spec.description  = "Simple implementation of social media login, with native button each social media"
-  spec.homepage     = "https://github.com/willsas/WLSAuth"
-  spec.license      = { :type => "MIT", :file => "LICENSE" }
-  spec.author             = { "Willa Saskara" => "willasaskara@gmail.com" }
-  spec.social_media_url   = "https://twitter.com/Willa Saskara"
+    spec.name         = "WLSAuth"
+    spec.version      = "0.0.1"
+    spec.summary      = "Authorization with social media"
+    spec.description  = "Simple implementation of social media login, with native button each social media"
+    spec.homepage     = "https://github.com/willsas/WLSAuth"
+    spec.license      = { :type => "MIT", :file => "LICENSE" }
+    spec.author             = { "Willa Saskara" => "willasaskara@gmail.com" }
+    spec.social_media_url   = "https://twitter.com/Willa Saskara"
 
- 
-  spec.platform     = :ios
-  spec.platform     = :ios, "13.0"
-  spec.source       = { :git => "https://github.com/willsas/WLSAuth.git", :tag => "#{spec.version}" }
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
 
-  # spec.public_header_files = "Classes/**/*.h"
+    spec.platform     = :ios
+    spec.platform     = :ios, "13.0"
+    spec.source       = { :git => "https://github.com/willsas/WLSAuth.git", :tag => "#{spec.version}" }
+    spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+    spec.exclude_files = "Classes/Exclude"
 
-  spec.requires_arc = true
-  spec.swift_version= '5.0'
-  spec.xcconfig     = { 'SWIFT_VERSION' => '5.0' }
-  # spec.dependency "JSONKit", "~> 1.4"
-  
-  
+    # spec.public_header_files = "Classes/**/*.h"
+
+    spec.requires_arc = true
+    spec.swift_version= '5.0'
+    spec.xcconfig     = { 'SWIFT_VERSION' => '5.0' }
+
+    spec.dependency 'FBSDKLoginKit'
+    spec.dependency 'FacebookCore'
+    spec.dependency 'FacebookLogin'
+    spec.dependency 'GoogleSignIn'
+
+    spec.resources = "WLSAuth/**/*.{xcassets, ttf}"
+
+
 end
